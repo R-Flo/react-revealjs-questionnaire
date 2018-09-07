@@ -19,14 +19,26 @@ import './questionnaire.js';
 
 ### a - Receive Datas
 
+User API CALL
+
 ```js
-/* actions/questionnaires.js line 8 */
+/* actions/questionnaires.js line 16 */
 const response = await fetch('/questions');
+```
+
+OR use test datas from question.js
+
+```js
+/* actions/questionnaires.js line 20 */
+await stall(3000);
+const data = questionsJson;
 ```
 
 The response from question is copied into questions.json
 
 ### b - Send The Choices
+
+Data are sent to url defined in actions/questionnaires.js line 20
 
 ```js
 /* actions/questionnaires.js line 8 */
